@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python Task</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Id</th>
+			<th>Timestamp</th>
+			<th>Temperature</th>
+			<th>Duration</th>
+		</tr>
+		{% for row in data %}
+		<tr>
+			<td>{{row['id']}}</td>
+			<td>{{row['timestamp']}}</td>
+			<td>{{row['temperature']}}</td>	
+			<td>{{row['duration']}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
